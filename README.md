@@ -225,3 +225,10 @@ Polymer and chromatin physics
 Graph neural networks
 Computational genomics
 This project is part of an ongoing exploration of simulation-supervised learning and differentiable modeling for biological systems.
+
+
+## License
+
+This project is released under the MIT License.
+
+See the `LICENSE` file for the full license text.
