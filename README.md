@@ -106,4 +106,33 @@ These results indicate that the current GNN does **not yet provide reliable para
 
 The strongest demonstrated component of the project is the differentiable simulation and gradient-based parameter adaptation pipeline.
 
+
 The GNN component currently serves primarily as an architectural proof-of-concept and requires further training and evaluation improvements before quantitative claims of accurate parameter inference can be made.
+
+
+
+## Limitations & Future Work
+
+This implementation is intentionally a proof-of-concept and has several limitations.
+
+### Current Limitations
+
+- The demonstrated target contact map is **synthetic/realistic Hi-C-like data**, not experimentally validated Hi-C data.
+- The polymer simulator is a simplified coarse-grained model and does not implement full molecular dynamics.
+- Langevin dynamics is not currently implemented.
+- The GNN currently shows poor quantitative parameter-inference performance.
+- The domain-adaptation objective currently achieves an MSE of approximately **0.9273**, indicating substantial room for improvement.
+- A complete end-to-end reproducibility pipeline has not yet been implemented.
+
+### Future Work
+
+Planned extensions include:
+
+1. Integration of validated experimental Hi-C datasets.
+2. Implementation of Langevin dynamics and more physically realistic polymer interactions.
+3. Improved graph representations and edge features.
+4. Better GNN training and validation strategies.
+5. Simulation-to-real domain adaptation using experimental chromatin data.
+6. Reproducible configuration, training, evaluation, and checkpointing pipelines.
+7. Evaluation across multiple cell types and genomic regions.
+
