@@ -136,3 +136,40 @@ Planned extensions include:
 6. Reproducible configuration, training, evaluation, and checkpointing pipelines.
 7. Evaluation across multiple cell types and genomic regions.
 
+
+## Reproducibility
+
+The experiments were developed and tested in a Google Colab environment using Python and PyTorch.
+
+### Main Dependencies
+
+- Python
+- PyTorch
+- PyTorch Geometric
+- NumPy
+- SciPy
+- scikit-learn
+- pandas
+- Matplotlib
+- seaborn
+- cooler
+- bioframe
+
+### Installation
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install torch-geometric
+pip install numpy matplotlib seaborn scikit-learn pandas
+pip install bioframe cooler
+
+Experimental Workflow
+The main workflow is:
+Generate or load a target Hi-C-like contact matrix.
+Simulate a differentiable polymer system.
+Convert contact maps into graph representations.
+Train a GCN-based parameter-inference model on simulated data.
+Optimize simulator parameters against the target contact matrix.
+Compare simulated and target contact maps.
+Report quantitative metrics and visualizations.
+Reproducibility note: Exact numerical results may vary because the current implementation uses stochastic initialization and noise. Random seeds should be explicitly controlled in a future version.
