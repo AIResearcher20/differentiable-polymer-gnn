@@ -48,3 +48,31 @@ The workflow consists of:
 | Contact representation | Hi-C-like contact matrices |
 | Parameter adaptation | Gradient-based optimization |
 | Evaluation | MSE, MAE, R² |
+
+
+## Methodology
+
+The project consists of four main components:
+
+1. **Differentiable Polymer Simulator**
+   - Simulates a coarse-grained polymer chain in 3D.
+   - Uses differentiable force calculations.
+   - Physical parameters include:
+     - Spring constant
+     - Attraction strength
+     - Noise amplitude
+
+2. **Contact-Matrix Construction**
+   - Pairwise particle distances are converted into soft contact probabilities using a sigmoid function.
+   - This provides a differentiable representation of polymer contacts.
+
+3. **Graph Neural Network**
+   - Contact matrices are converted into graph representations.
+   - A 3-layer GCN is used to infer the underlying physical parameters.
+   - The model contains 11,075 trainable parameters.
+
+4. **Simulation-to-Target Adaptation**
+   - The simulator parameters are optimized against a target contact matrix.
+   - Gradient-based optimization minimizes the MSE between simulated and target contact maps.
+
+> **Important:** The current implementation is a proof-of-concept. The target contact matrix used in the demonstrated pipeline is synthetic/realistic Hi-C-like data rather than a validated experimental Hi-C dataset.
