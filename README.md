@@ -76,3 +76,34 @@ The project consists of four main components:
    - Gradient-based optimization minimizes the MSE between simulated and target contact maps.
 
 > **Important:** The current implementation is a proof-of-concept. The target contact matrix used in the demonstrated pipeline is synthetic/realistic Hi-C-like data rather than a validated experimental Hi-C dataset.
+
+## Results
+
+The current proof-of-concept pipeline produced the following results:
+
+| Component | Result |
+|---|---:|
+| GNN architecture | 3-layer GCN |
+| Trainable parameters | 11,075 |
+| Synthetic simulation samples | 300 generated |
+| Samples used in final evaluation | 200 |
+| Contact-map adaptation MSE | 0.927297 |
+| Adapted Spring constant | 1.1334 |
+| Adapted Attraction strength | 0.3980 |
+| Adapted Noise | 0.2079 |
+
+### GNN Parameter Inference
+
+The current GNN evaluation produced:
+
+- Spring: R² = -0.002
+- Attraction: R² = -6.255
+- Noise: R² = -83.565
+
+These results indicate that the current GNN does **not yet provide reliable parameter inference** and should be considered a baseline/prototype rather than a validated predictive model.
+
+### Interpretation
+
+The strongest demonstrated component of the project is the differentiable simulation and gradient-based parameter adaptation pipeline.
+
+The GNN component currently serves primarily as an architectural proof-of-concept and requires further training and evaluation improvements before quantitative claims of accurate parameter inference can be made.
