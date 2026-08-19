@@ -1,5 +1,16 @@
 # Differentiable Polymer–GNN for Chromatin Contact Modeling
 
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red)
+![PyG](https://img.shields.io/badge/PyTorch%20Geometric-GNN-orange)
+![Scientific%20ML](https://img.shields.io/badge/Scientific-ML-purple)
+![Differentiable Simulation](https://img.shields.io/badge/Differentiable-Simulation-green)
+![Computational Genomics](https://img.shields.io/badge/Computational-Genomics-brightgreen)
+![Status](https://img.shields.io/badge/Status-Prototype-yellow)
+![License](https://img.shields.io/badge/License-MIT-black)
+
+
 A proof-of-concept framework combining a differentiable polymer simulator
 with a Graph Neural Network (GNN) for modeling chromatin-like contact
 patterns and inferring underlying biophysical parameters.
