@@ -203,3 +203,25 @@ gnn_model.py — GCN-based physical parameter inference model.
 notebooks/ — experimental workflow and demonstrations.
 results/ — generated figures and evaluation metrics.
 The current repository may initially contain the implementation primarily as a notebook. The modular src/ structure represents the intended organization for further development
+
+## Citation
+
+If you use this project in research or experimentation, please cite the repository:
+
+```bibtex
+@software{Moafi_differentiable_polymer_gnn,
+  author = {Sepideh, Moafi},
+  title = {Differentiable Polymer Simulation with Graph Neural Networks},
+  year = {2026},
+  note = {Proof-of-concept research software},
+}
+
+Author
+Sepideh Moafi 
+AI/ML Researcher working at the intersection of:
+Differentiable simulation
+Scientific machine learning
+Polymer and chromatin physics
+Graph neural networks
+Computational genomics
+This project is part of an ongoing exploration of simulation-supervised learning and differentiable modeling for biological systems.
