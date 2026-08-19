@@ -173,3 +173,33 @@ Optimize simulator parameters against the target contact matrix.
 Compare simulated and target contact maps.
 Report quantitative metrics and visualizations.
 Reproducibility note: Exact numerical results may vary because the current implementation uses stochastic initialization and noise. Random seeds should be explicitly controlled in a future version.
+## Project Structure
+
+```text
+differentiable-polymer-gnn/
+│
+├── README.md
+│
+├── notebooks/
+│   └── differentiable_polymer_gnn.ipynb
+│
+├── src/
+│   ├── polymer_simulator.py
+│   ├── graph_utils.py
+│   └── gnn_model.py
+│
+├── results/
+│   ├── figures/
+│   └── metrics/
+│
+├── requirements.txt
+│
+└── LICENSE
+
+Main Components
+polymer_simulator.py — differentiable coarse-grained polymer simulation.
+graph_utils.py — conversion of contact matrices into graph representations.
+gnn_model.py — GCN-based physical parameter inference model.
+notebooks/ — experimental workflow and demonstrations.
+results/ — generated figures and evaluation metrics.
+The current repository may initially contain the implementation primarily as a notebook. The modular src/ structure represents the intended organization for further development
